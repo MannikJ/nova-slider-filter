@@ -3,8 +3,8 @@
 namespace DigitalCreative\NovaRangeFilter;
 
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Http\Request;
 use Laravel\Nova\Filters\Filter;
+use Laravel\Nova\Http\Requests\NovaRequest;
 
 class SliderFilter extends Filter
 {
@@ -24,7 +24,7 @@ class SliderFilter extends Filter
      *
      * @return Builder
      */
-    public function apply(Request $request, $query, $value)
+    public function apply(NovaRequest $request, $query, $value)
     {
         return $query;
     }
@@ -36,7 +36,7 @@ class SliderFilter extends Filter
      *
      * @return array
      */
-    public function options(Request $request)
+    public function options(NovaRequest $request)
     {
         return [];
     }
